@@ -9,9 +9,9 @@
     "ks:build": "keystone build --frozen",
     "dev": "next dev",
     "build": "next build",
-    "postinstall": "keystone build --no-ui --frozen",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postitall": "keystone build --no-ui --frozen"
   },
   "keywords": [
     "keystone"
