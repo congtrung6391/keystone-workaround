@@ -9,7 +9,7 @@ const lists = {
       name: text({ validation: { isRequired: true } }),
       email: text({ validation: { isRequired: true }, isIndexed: 'unique' }),
       posts: relationship({ ref: 'Post.author', many: true }),
-      password: passworautd({ validation: { isRequired: true } })
+      password: password({ validation: { isRequired: true } })
     },
   }),
   Post: list({

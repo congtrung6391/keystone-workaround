@@ -7,6 +7,11 @@ type User {
   email: String
   posts(where: PostWhereInput! = {}, orderBy: [PostOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: PostWhereUniqueInput): [Post!]
   postsCount(where: PostWhereInput! = {}): Int
+  password: PasswordState
+}
+
+type PasswordState {
+  isSet: Boolean!
 }
 
 input UserWhereUniqueInput {
@@ -84,6 +89,7 @@ input UserUpdateInput {
   name: String
   email: String
   posts: PostRelateToManyForUpdateInput
+  password: String
 }
 
 input PostRelateToManyForUpdateInput {
@@ -102,6 +108,7 @@ input UserCreateInput {
   name: String
   email: String
   posts: PostRelateToManyForCreateInput
+  password: String
 }
 
 input PostRelateToManyForCreateInput {
