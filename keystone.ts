@@ -53,4 +53,9 @@ export default config({
       credentials: true,                 // Enable credentials if required
     },
   },
+  graphql: {
+    path: '/api/graphql',
+    playground: true,
+    apolloConfig: { introspection: false },
+  },
 });
