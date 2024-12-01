@@ -5,7 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "keystone dev"
+    "ks:dev": "keystone dev",
+    "ks:build": "keystone build --frozen",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "keywords": [
     "keystone"
@@ -13,8 +18,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@apollo/server": "^4.11.2",
+    "@as-integrations/next": "^3.2.0",
     "@keystone-6/auth": "^8.1.0",
-    "@keystone-6/core": "^6.3.1"
+    "@keystone-6/core": "^6.3.1",
+    "graphql": "^16.9.0",
+    "next": "^15.0.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "typescript": "^5.7.2"
