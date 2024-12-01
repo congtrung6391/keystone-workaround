@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "ks:dev": "keystone dev",
     "ks:build": "keystone build --frozen",
+    "ks:migrate": "keystone build  --no-ui --frozen",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
