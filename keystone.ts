@@ -59,6 +59,6 @@ export default config({
   graphql: {
     path: process.env.APOLLO_CLIENT_GRAPHQL_URI || '/api/graphql',
     playground: true,
-    apolloConfig: { introspection: false },
+    apolloConfig: { introspection: true },
   },
 });
