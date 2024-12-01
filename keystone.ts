@@ -1,6 +1,9 @@
 import { config, list } from '@keystone-6/core';
 import { allowAll } from '@keystone-6/core/access';
 import { password, relationship, select, text, timestamp } from '@keystone-6/core/fields';
+import dotenv from 'dotenv';
+
+dotenv.config()
 
 const lists = {
   User: list({
@@ -54,7 +57,7 @@ export default config({
     },
   },
   graphql: {
-    path: '/api/graphql',
+    path: process.env.APOLLO_CLIENT_GRAPHQL_URI || '/api/graphql',
     playground: true,
     apolloConfig: { introspection: false },
   },
