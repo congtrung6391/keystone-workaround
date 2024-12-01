@@ -45,4 +45,12 @@ export default config({
     url: 'file:./keystone.db',
   },
   lists,
+  server: {
+    port: 3000,          // Specify the port
+    cors: {
+      origin: '*', // Add allowed origins for CORS
+      method: '*',
+      credentials: true,                 // Enable credentials if required
+    },
+  },
 });
